@@ -1,8 +1,7 @@
 -- Setup for Getting Started with Pipeline Builder
 -- https://www.snowflake.com/en/developers/guides/getting-started-with-pipeline-builder/
 --
--- Run this file as ACCOUNTADMIN, after you create the TASTY_PIPELINE_QS_GIT_INT
--- API integration from the guide. Replace <your_username> with your Snowflake
+-- Run this file as ACCOUNTADMIN. Replace <your_username> with your Snowflake
 -- user name before you run it.
 
 USE ROLE ACCOUNTADMIN;
@@ -30,8 +29,7 @@ CREATE DATABASE IF NOT EXISTS TASTY_PIPELINE_QS_DB;
 GRANT OWNERSHIP ON DATABASE TASTY_PIPELINE_QS_DB TO ROLE TASTY_PIPELINE_QS_ROLE COPY CURRENT GRANTS;
 
 -- 5. Integration privileges
--- Lets the guide role use the Git API integration to pull the companion repo
-GRANT USAGE ON INTEGRATION TASTY_PIPELINE_QS_GIT_INT TO ROLE TASTY_PIPELINE_QS_ROLE;
+-- N/A for this guide
 
 -- 6. Future grants
 -- N/A for this guide
